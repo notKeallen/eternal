@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+body{
+  background-color: #000;
+  overflow-x: hidden;
+}
+
+p{
+  color: #E2E2E2;
+}
+
+::-webkit-scrollbar {
+  width: 10px; /* Width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #333333; /* Color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #83C000; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Roundness of the scrollbar thumb */ /* Padding around the scrollbar thumb */
+}
+
+/* Animation for particles */
+.dot {
+  position: absolute;
+  background-color: #929292;
+  border-radius: 50%;
+  animation: move-up 30s linear infinite; /* Adjusted animation duration */
+}
+
+@keyframes move-up {
+  to {
+    transform: translateY(-100vh); /* Move particles to the top of the viewport */
+  }
+}
+
+.rounded-buttonRadius {
+  border-radius: 10px; /* or use the value you defined */
+}
+
+/* Add blur effect on hover */
+.rounded-buttonRadius:hover > img {
+  filter: blur(4px); /* Adjust blur amount as needed */
+}
